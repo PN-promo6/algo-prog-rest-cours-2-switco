@@ -125,3 +125,17 @@ app.listen(3000); // Mise en écoute du serveur
 app.get('/users', function(req, res) {
     res.send(users);
 })
+
+app.get('/users/:id', function(req, res) {
+  let id = req.params.id; // La requête envoie un paramètre qui s'appelle id
+
+  for (let i = 0; i < users.length; i++) {
+    let currentUser = users[i]; 
+    if(currentUser.id == id) { // On vérifie que l'id du user de l'api correspond bien à l'id du user envoyé en requête
+      res.send(currentUser);
+      break; // Si oui on sors de la fonction et on passe à la suite
+    }
+  }
+res.statusMessage = "User not found";
+res.status(404).end(); // On renvoie le status correspondant et on met fin à la requête
+})

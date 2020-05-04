@@ -13,13 +13,10 @@ export class DataService {
   public fetchUsers() :Observable<any> {
     let usersData: Observable<any> = this.httpClient.get('http://localhost:3000/users');
     return usersData;
-      // .subscribe(
-      //   res => {
-      //     console.log(res);
-      //   },
-      //   error => {
-      //     console.log(error);
-      //   }
-      // );
+  }
+
+  public fetchUsersById(id: string) :Observable<any> {
+    let userData: Observable<any> = this.httpClient.get('http://localhost:3000/users/' + id);
+    return  userData;
   }
 }
