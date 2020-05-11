@@ -1,7 +1,8 @@
 <div class="card mb-4">
-    <div class="card-body">
-      <img class="card-img-top mb-2" src={{user.photo}}/>
+    <div class="card-body text-center">
+      <img class="card-img-top p-4 rounded-circle" src={{user.photo}}/>
       <h5 class="card-title">{{ user.name }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ user.email }}</h6>
+      <p class="card-text">{{ user.age }} yrs</p>
+      <h6 class="card-subtitle mb-2 text-muted">✉️ {{ user.email }}</h6>
     </div>
   </div>

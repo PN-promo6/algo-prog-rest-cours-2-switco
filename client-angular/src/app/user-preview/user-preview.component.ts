@@ -9,10 +9,9 @@ import { User } from '../models/user/user';
 export class UserPreviewComponent implements OnInit {
 
   @Input() user: User;
-
+  
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
