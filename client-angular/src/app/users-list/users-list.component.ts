@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { DataService } from '../services/data-service/data.service';
+import { User } from '../models/user/user';
 
 @Component({
   selector: 'app-users-list',
@@ -10,7 +11,7 @@ import { DataService } from '../services/data-service/data.service';
 
 export class UsersListComponent implements OnInit {
 
-  users: any[];
+  public users: User[];
 
   constructor(private dataService: DataService) {}
 
