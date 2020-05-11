@@ -9,4 +9,5 @@ export class User {
     phone: string;  	 
     latitude: number;	 
     longitude: number; 
+    photo: string;
   }
